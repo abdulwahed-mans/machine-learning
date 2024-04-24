@@ -1,11 +1,11 @@
 # chat/urls.py
-
 from django.urls import path
-from .views import chat
-
-app_name = "chat"
+# from .views import ChatPageView
+from .views import predict_product
 
 
 urlpatterns = [
-    path("", chat, name="chat"),
+    # path("", ChatPageView.as_view(), name="chat"),
+    path("", predict_product, name='predict_product'),
+
 ]

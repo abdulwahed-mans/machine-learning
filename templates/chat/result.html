@@ -1,0 +1,12 @@
+<!-- result.html -->
+{% extends 'base.html' %}
+
+{% block title %}Chat Result{% endblock %}
+
+{% block content %}
+<h1>Product Prediction Result</h1>
+<p>Product Name: {{ product_name }}</p>
+<p>Prediction: {{ prediction }}</p>
+<p><a href="{% url 'predict_product' %}">Back to Product Form</a></p>
+
+{% endblock %}
