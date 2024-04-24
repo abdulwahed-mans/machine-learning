@@ -1,4 +1,4 @@
-# Django Project with Postgres, Gunicorn, and Nginx
+# Django Machine Learning Project with Postgres, Gunicorn, and Nginx
 
 ## Features
 
@@ -13,14 +13,7 @@
 
 # Installation
 
-$ python -m venv venv
-
-## Windows
-
-$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-$ .venv\Scripts\Activate.ps1
-
-## macOS
+### macOS & Linux
 
 python3 -m venv venv
 
@@ -33,7 +26,7 @@ $ source venv/bin/activate
 
 Load the site at http://127.0.0.1:8000
 
-# Docker
+### Docker
 
 [](https://github.com/wsvincent/djangox/blob/main/README.md#docker)
 
