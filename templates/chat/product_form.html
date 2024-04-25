@@ -1,13 +1,29 @@
-<!-- product_form.html -->
+<!-- chat/templates/chat/product_form.html -->
 {% extends 'base.html' %}
 
 {% block title %}Product Information{% endblock %}
 
 {% block content %}
-<h1>Enter Product Information</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
+<div class="container">
+    <h1 class="mt-5">Enter Product Information</h1>
+    <form class="mt-3" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+
+    {% if product_name %}
+    <div class="mt-5">
+        <h2>Product Prediction Result</h2>
+        <p>Product Name: {{ product_name }}</p>
+        <p>
+            {% if prediction == "Healthy" %}
+            <span class="text-success"><i class="bi bi-check-circle"></i> Healthy</span>
+            {% elif prediction == "Unhealthy" %}
+            <span class="text-danger"><i class="bi bi-x-circle"></i> Unhealthy</span>
+            {% endif %}
+        </p>
+    </div>
+    {% endif %}
+</div>
 {% endblock %}
